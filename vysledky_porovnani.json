@@ -1,0 +1,2229 @@
+[
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "VYSTOUPENÍ _ sokolka-ze-sakvic.html",
+    "cas_s": 15.96,
+    "tokens_per_sec": 52.0,
+    "pocet_akci": 7,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "hody",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "krojované plesy",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "fašanky",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "besedy u cimbálu",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "košty vín/pálenek",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "vystoupení dechových a cimbálových hudeb",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        },
+        {
+          "nazev": "folklórní festivaly",
+          "datum": "null",
+          "cas": "null",
+          "misto": "Šakvic"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "VYSTOUPENÍ _ sokolka-ze-sakvic.html",
+    "cas_s": 10.45,
+    "tokens_per_sec": 30.7,
+    "pocet_akci": 0,
+    "vystup": {
+      "nalezeno": false,
+      "akce": []
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "VYSTOUPENÍ _ sokolka-ze-sakvic.html",
+    "cas_s": 20.87,
+    "tokens_per_sec": 12.5,
+    "pocet_akci": 0,
+    "vystup": {
+      "nalezeno": false,
+      "akce": []
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "VYSTOUPENÍ _ sokolka-ze-sakvic.html",
+    "cas_s": 16.07,
+    "tokens_per_sec": 40.3,
+    "pocet_akci": 1,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Zlatá křídlovka",
+          "datum": "2004",
+          "cas": null,
+          "misto": "Šakvice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "VYSTOUPENÍ _ sokolka-ze-sakvic.html",
+    "cas_s": 15.45,
+    "tokens_per_sec": 19.0,
+    "pocet_akci": 1,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Vystoupení",
+          "datum": "2004",
+          "cas": "null",
+          "misto": "Šakvice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "roční přehled 2026.pdf",
+    "cas_s": 31.66,
+    "tokens_per_sec": 37.3,
+    "pocet_akci": 9,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Taneční ples",
+          "datum": "09.01.2026",
+          "cas": null,
+          "misto": "Reprezentační ples města"
+        },
+        {
+          "nazev": "Fašanek, Krojový ples",
+          "datum": "14.02.2026",
+          "cas": null,
+          "misto": "Mikuleckého"
+        },
+        {
+          "nazev": "Výroční cena města",
+          "datum": "05.03.2026",
+          "cas": null,
+          "misto": "Reprezentační ples města"
+        },
+        {
+          "nazev": "Hobblík a Mumraj!",
+          "datum": "18.03 – 22.03.2026",
+          "cas": null,
+          "misto": "Mikuleckého"
+        },
+        {
+          "nazev": "Ples Muzikantů",
+          "datum": "10.04 – 11.04.2026",
+          "cas": null,
+          "misto": "Mikuleckého"
+        },
+        {
+          "nazev": "Věneček z rozmarýnu Fanoše Mikuleckého",
+          "datum": "10.01 – 11.01.2026",
+          "cas": null,
+          "misto": "Mikuleckého"
+        },
+        {
+          "nazev": "Posazení pod májů",
+          "datum": "01.08.2026",
+          "cas": null,
+          "misto": "Reprezentační ples města"
+        },
+        {
+          "nazev": "Svatovavřinecké slavnosti",
+          "datum": "01.08.2026",
+          "cas": null,
+          "misto": "Reprezentační ples města"
+        },
+        {
+          "nazev": "Svatovavřinecké slavnosti",
+          "datum": "08.08.2026",
+          "cas": null,
+          "misto": "Reprezentační ples města"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "roční přehled 2026.pdf",
+    "cas_s": 33.83,
+    "tokens_per_sec": 29.6,
+    "pocet_akci": 7,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Reprezentační ples města",
+          "datum": "24.01.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Fašanek, Krojový ples",
+          "datum": "14.02.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Hobblík a Mumraj!",
+          "datum": "18.03.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Ples Muzikantů",
+          "datum": "10.04.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Věneček z rozmarýnu Fanoše Mikuleckého",
+          "datum": "10.01.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Posazení pod májů",
+          "datum": "11.01.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        },
+        {
+          "nazev": "Svatovavřinecké slavnosti",
+          "datum": "08.08.2026",
+          "cas": null,
+          "misto": "Mikulec"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "roční přehled 2026.pdf",
+    "cas_s": 43.64,
+    "tokens_per_sec": 8.2,
+    "pocet_akci": 0,
+    "vystup": {
+      "nalezeno": false,
+      "akce": []
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "roční přehled 2026.pdf",
+    "cas_s": 53.11,
+    "tokens_per_sec": 34.9,
+    "pocet_akci": 16,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Krojované plesy",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Fašanky",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Besedy u cimbálu",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Košty vín",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Košty pálenek",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Vystoupení dechových hudeb",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Vystoupení cimbálových hudeb",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Folklórní festival",
+          "datum": "2026-03-17",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Krojový ples",
+          "datum": "14.02.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Fašanek",
+          "datum": "14.02.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Posazení pod májů",
+          "datum": "10.01.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Svatovavřinecké slavnosti",
+          "datum": "01.08.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Podzimní sklizeň",
+          "datum": "19.09.2026",
+          "cas": null,
+          "misto": "Hodonín"
+        },
+        {
+          "nazev": "Košty vín/pálenek",
+          "datum": "28.11.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Besedy u cimbálu",
+          "datum": "28.11.2026",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Lázeňské vinobraní",
+          "datum": "25.9.2026",
+          "cas": null,
+          "misto": "Hodonín"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "roční přehled 2026.pdf",
+    "cas_s": 193.78,
+    "tokens_per_sec": 18.1,
+    "pocet_akci": 19,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Reprezentační ples města",
+          "datum": "24.01.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Fašanek, Krojový ples",
+          "datum": "14.02.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Hobblík a Mumraj!",
+          "datum": "10.04.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Ples Muzikantů",
+          "datum": "18.03.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Ples Muzikantů",
+          "datum": "22.03.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Věneček z rozmarýnu Fanoše",
+          "datum": "10.01.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Posazení pod májů",
+          "datum": "10.01.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Svatovavřinecké slavnosti",
+          "datum": "08.08.2026",
+          "cas": null,
+          "misto": "Město"
+        },
+        {
+          "nazev": "Letní příměstský tábor pro děti ve věku 9-13 let",
+          "datum": "13. - 17.7.2026",
+          "cas": null,
+          "misto": "Hodonínky"
+        },
+        {
+          "nazev": "Letní příměstský tábor pro děti ve věku 6-9 let",
+          "datum": "27.7. - 31.7.2026",
+          "cas": null,
+          "misto": "Hodonínky"
+        },
+        {
+          "nazev": "Letní příměstský tábor pro děti ve věku 6-9 let",
+          "datum": "10.8. - 14.8.2026",
+          "cas": null,
+          "misto": "Hodonínky"
+        },
+        {
+          "nazev": "Podzimní sklizeň",
+          "datum": "19.09.2026",
+          "cas": null,
+          "misto": "Hodonínky"
+        },
+        {
+          "nazev": "Podzimní příměstský tábor pro děti ve věku 6-9 let",
+          "datum": "29.10. a 30.10.2026",
+          "cas": null,
+          "misto": "Hodonínky"
+        },
+        {
+          "nazev": "Den pro dětskou knihu",
+          "datum": "28.11.2026",
+          "cas": null,
+          "misto": "Březen"
+        },
+        {
+          "nazev": "Noc s Andersenem",
+          "datum": "27.3.2026",
+          "cas": null,
+          "misto": "Březen"
+        },
+        {
+          "nazev": "Festival literární slovácko",
+          "datum": "Únor",
+          "cas": null,
+          "misto": "Březen"
+        },
+        {
+          "nazev": "Jižní Morava čte",
+          "datum": "Září",
+          "cas": null,
+          "misto": "Březen"
+        },
+        {
+          "nazev": "Jižní Morava čte",
+          "datum": "Prosinec",
+          "cas": null,
+          "misto": "Březen"
+        },
+        {
+          "nazev": "Lázeňské vinobraní",
+          "datum": "25.9.2025",
+          "cas": null,
+          "misto": "Donín"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "Akce – Střeličáci.html",
+    "cas_s": 20.96,
+    "tokens_per_sec": 108.9,
+    "pocet_akci": 23,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Střeličáci",
+          "datum": "21. 11.2026",
+          "cas": null,
+          "misto": "Střelice"
+        },
+        {
+          "nazev": "Střelice - Babské hody",
+          "datum": "21. 11.2026",
+          "cas": null,
+          "misto": "Střelice"
+        },
+        {
+          "nazev": "Troubsko - krojovaný ples",
+          "datum": "23. 01.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Ořechov - krojovaný ples",
+          "datum": "30. 01.2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Ostopovice - Poleskavský ples",
+          "datum": "05. 02.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Blučina - muzikantský ples",
+          "datum": "13. 03.2027",
+          "cas": null,
+          "misto": "Blučina"
+        },
+        {
+          "nazev": "Ořechov - Ženáčské hody",
+          "datum": "24. 04.2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Rajhradice - Mladé hody",
+          "datum": "08. 05.2027",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Rajhradice - Mladé hody",
+          "datum": "09. 05.2027",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Troubsko - Mladé hody",
+          "datum": "15. 05.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Troubsko - Mladé hody",
+          "datum": "16. 05.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Ostopovice - Mladé hody",
+          "datum": "19. 06.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Soukromá událost",
+          "datum": "26. 06.2027",
+          "cas": null,
+          "misto": "null"
+        },
+        {
+          "nazev": "Hvozdec - Mladé hody",
+          "datum": "10. 07.2027",
+          "cas": null,
+          "misto": "Hvozdec"
+        },
+        {
+          "nazev": "Přízřenice - hody",
+          "datum": "17. 07.2027",
+          "cas": null,
+          "misto": "Přízřenice"
+        },
+        {
+          "nazev": "Silůvky- Mladé hody",
+          "datum": "24. 07.2027",
+          "cas": null,
+          "misto": "Silůvky"
+        },
+        {
+          "nazev": "Hajany - hody",
+          "datum": "14. 08.2027",
+          "cas": null,
+          "misto": "Hajany"
+        },
+        {
+          "nazev": "Syrovice - Mladé hody",
+          "datum": "28. 08.2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Syrovice - Mladé hody",
+          "datum": "29. 08.2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Chrlice - Mladé hody",
+          "datum": "04. 09.2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Chrlice - Mladé hody",
+          "datum": "05. 09.2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Moravany - Folklorní slavnosti",
+          "datum": "11. 09.2027",
+          "cas": null,
+          "misto": "Moravany"
+        },
+        {
+          "nazev": "Ostopovice - Babské hody",
+          "datum": "09. 10.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "Akce – Střeličáci.html",
+    "cas_s": 25.09,
+    "tokens_per_sec": 69.8,
+    "pocet_akci": 21,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Babské hody",
+          "datum": "2026-11-21",
+          "cas": null,
+          "misto": "Střelice"
+        },
+        {
+          "nazev": "Krojovaný ples",
+          "datum": "2027-01-23",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Krojovaný ples",
+          "datum": "2027-01-30",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Poleskavský ples",
+          "datum": "2027-02-05",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Muzikantský ples",
+          "datum": "2027-03-13",
+          "cas": null,
+          "misto": "Blučina"
+        },
+        {
+          "nazev": "Ženáčské hody",
+          "datum": "2027-04-24",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-05-08",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-05-09",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-05-15",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-05-16",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-06-19",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-07-10",
+          "cas": null,
+          "misto": "Hvozdec"
+        },
+        {
+          "nazev": "Hody",
+          "datum": "2027-07-17",
+          "cas": null,
+          "misto": "Přízřenice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-07-24",
+          "cas": null,
+          "misto": "Silůvky"
+        },
+        {
+          "nazev": "Hody",
+          "datum": "2027-08-14",
+          "cas": null,
+          "misto": "Hajany"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-08-28",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-08-29",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-09-04",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "2027-09-05",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Folklorní slavnosti",
+          "datum": "2027-09-11",
+          "cas": null,
+          "misto": "Moravany"
+        },
+        {
+          "nazev": "Babské hody",
+          "datum": "2027-10-09",
+          "cas": null,
+          "misto": "Ostopovice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "Akce – Střeličáci.html",
+    "cas_s": 97.9,
+    "tokens_per_sec": 16.2,
+    "pocet_akci": 21,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Střelice - Babské hody",
+          "datum": "21. 11. 2026",
+          "cas": null,
+          "misto": "Střelice"
+        },
+        {
+          "nazev": "Troubsko - krojovaný ples",
+          "datum": "23. 01. 2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Ořechov - krojovaný ples",
+          "datum": "30. 01. 2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Ostopovice - Poleskavský ples",
+          "datum": "05. 02. 2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Blučina - muzikantský ples",
+          "datum": "13. 03. 2027",
+          "cas": null,
+          "misto": "Blučina"
+        },
+        {
+          "nazev": "Ořechov - Ženáčské hody",
+          "datum": "24. 04. 2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Rajhradice - Mladé hody",
+          "datum": "08. 05. 2027",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Rajhradice - Mladé hody",
+          "datum": "09. 05. 2027",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Troubsko - Mladé hody",
+          "datum": "15. 05. 2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Troubsko - Mladé hody",
+          "datum": "16. 05. 2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Ostopovice - Mladé hody",
+          "datum": "19. 06. 2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Hvozdec - Mladé hody",
+          "datum": "10. 07. 2027",
+          "cas": null,
+          "misto": "Hvozdec"
+        },
+        {
+          "nazev": "Přízřenice - hody",
+          "datum": "17. 07. 2027",
+          "cas": null,
+          "misto": "Přízřenice"
+        },
+        {
+          "nazev": "Silůvky- Mladé hody",
+          "datum": "24. 07. 2027",
+          "cas": null,
+          "misto": "Silůvky"
+        },
+        {
+          "nazev": "Hajany - hody",
+          "datum": "14. 08. 2027",
+          "cas": null,
+          "misto": "Hajany"
+        },
+        {
+          "nazev": "Syrovice - Mladé hody",
+          "datum": "28. 08. 2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Syrovice - Mladé hody",
+          "datum": "29. 08. 2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Chrlice - Mladé hody",
+          "datum": "04. 09. 2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Chrlice - Mladé hody",
+          "datum": "05. 09. 2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Moravany - Folklorní slavnosti",
+          "datum": "11. 09. 2027",
+          "cas": null,
+          "misto": "Moravany"
+        },
+        {
+          "nazev": "Ostopovice - Babské hody",
+          "datum": "09. 10. 2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "Akce – Střeličáci.html",
+    "cas_s": 28.88,
+    "tokens_per_sec": 75.1,
+    "pocet_akci": 21,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Babské hody",
+          "datum": "21. 11.2026",
+          "cas": null,
+          "misto": "Střelice"
+        },
+        {
+          "nazev": "Krojovaný ples",
+          "datum": "23. 01.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Krojovaný ples",
+          "datum": "30. 01.2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Poleskavský ples",
+          "datum": "05. 02.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Muzikantský ples",
+          "datum": "13. 03.2027",
+          "cas": null,
+          "misto": "Blučina"
+        },
+        {
+          "nazev": "Ženáčské hody",
+          "datum": "24. 04.2027",
+          "cas": null,
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "08. 05.2027",
+          "cas": null,
+          "misto": "Rajhradice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "09. 05.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "15. 05.2027",
+          "cas": null,
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "16. 05.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "19. 06.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "10. 07.2027",
+          "cas": null,
+          "misto": "Hvozdec"
+        },
+        {
+          "nazev": "Hody",
+          "datum": "17. 07.2027",
+          "cas": null,
+          "misto": "Přízřenice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "24. 07.2027",
+          "cas": null,
+          "misto": "Silůvky"
+        },
+        {
+          "nazev": "Hody",
+          "datum": "14. 08.2027",
+          "cas": null,
+          "misto": "Hajany"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "28. 08.2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "29. 08.2027",
+          "cas": null,
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "04. 09.2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Mladé hody",
+          "datum": "05. 09.2027",
+          "cas": null,
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Folklorní slavnosti",
+          "datum": "11. 09.2027",
+          "cas": null,
+          "misto": "Moravany"
+        },
+        {
+          "nazev": "Babské hody",
+          "datum": "09. 10.2027",
+          "cas": null,
+          "misto": "Ostopovice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "Akce – Střeličáci.html",
+    "cas_s": 38.64,
+    "tokens_per_sec": 26.9,
+    "pocet_akci": 14,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-01-23",
+          "cas": "19:00",
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-04-24",
+          "cas": "19:00",
+          "misto": "Ořechov"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-05-15",
+          "cas": "19:00",
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-05-16",
+          "cas": "19:00",
+          "misto": "Troubsko"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-06-19",
+          "cas": "19:00",
+          "misto": "Ostopovice"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-07-10",
+          "cas": "19:00",
+          "misto": "Hvozdec"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-07-17",
+          "cas": "19:00",
+          "misto": "Přízřenice"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-07-24",
+          "cas": "19:00",
+          "misto": "Silůvky"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-08-14",
+          "cas": "19:00",
+          "misto": "Hajany"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-08-28",
+          "cas": "19:00",
+          "misto": "Syrovice"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-09-04",
+          "cas": "19:00",
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-09-05",
+          "cas": "19:00",
+          "misto": "Chrlice"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-09-11",
+          "cas": "19:00",
+          "misto": "Moravany"
+        },
+        {
+          "nazev": "Střeličáci",
+          "datum": "2027-10-09",
+          "cas": "19:00",
+          "misto": "Ostopovice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "Kalendář akcí - Oficiální stránky obce Popice.html",
+    "cas_s": 11.81,
+    "tokens_per_sec": 95.6,
+    "pocet_akci": 2,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hubertovské skákání",
+          "datum": "24. 10. 2026",
+          "cas": "12:00",
+          "misto": "Popice"
+        },
+        {
+          "nazev": "Svatoondřejské žehnaní mladých vín",
+          "datum": "28. 11. 2026",
+          "cas": "15:00",
+          "misto": "Popice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "Kalendář akcí - Oficiální stránky obce Popice.html",
+    "cas_s": 15.54,
+    "tokens_per_sec": 65.8,
+    "pocet_akci": 2,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hubertovské skákání",
+          "datum": "2026-10-24",
+          "cas": null,
+          "misto": "Popice"
+        },
+        {
+          "nazev": "Svatoondřejské žehnání mladých vín",
+          "datum": "2026-11-28",
+          "cas": "15:00",
+          "misto": "Popice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "Kalendář akcí - Oficiální stránky obce Popice.html",
+    "cas_s": 18.55,
+    "tokens_per_sec": 16.7,
+    "pocet_akci": 0,
+    "vystup": {
+      "nalezeno": false,
+      "akce": []
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "Kalendář akcí - Oficiální stránky obce Popice.html",
+    "cas_s": 19.88,
+    "tokens_per_sec": 70.2,
+    "pocet_akci": 2,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "HUBERTOVSKÉ SKÁKÁNÍ",
+          "datum": "24. 10. 2026",
+          "cas": "12:00",
+          "misto": "Jízdárna TJ Palava, Popice"
+        },
+        {
+          "nazev": "SVATOONDŘEJSKÉ ŽEHNÁNÍ MLADÝCH VÍN",
+          "datum": "28. 11. 2026",
+          "cas": "15:00",
+          "misto": "Kulturní dům, Popice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "Kalendář akcí - Oficiální stránky obce Popice.html",
+    "cas_s": 20.57,
+    "tokens_per_sec": 26.5,
+    "pocet_akci": 2,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "HUBERTOVSKÉ SKÁKÁNÍ",
+          "datum": "24. 10. 2026",
+          "cas": "12:00",
+          "misto": "Jízdárna TJ Palava, Popice"
+        },
+        {
+          "nazev": "SVATOONDŘEJSKÉ ŽEHNÁNÍ MLADÝCH VÍN",
+          "datum": "28. 11. 2026",
+          "cas": null,
+          "misto": "Kulturní dům, Popice"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "Dechová hudba Svárovanka.html",
+    "cas_s": 6.65,
+    "tokens_per_sec": 78.2,
+    "pocet_akci": 0,
+    "vystup": {
+      "nalezeno": false,
+      "akce": []
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "Dechová hudba Svárovanka.html",
+    "cas_s": 18.87,
+    "tokens_per_sec": 69.3,
+    "pocet_akci": 9,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "17.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "18.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Strážnice hody",
+          "datum": "14.11.2026",
+          "cas": null,
+          "misto": "Strážnice"
+        },
+        {
+          "nazev": "Katarínska zábava Štefanov",
+          "datum": "21.11.2026",
+          "cas": null,
+          "misto": "Štefanov"
+        },
+        {
+          "nazev": "Krojovy ples Valtice",
+          "datum": "30.01.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Lednice hody",
+          "datum": "24.07.2027",
+          "cas": null,
+          "misto": "Lednice"
+        },
+        {
+          "nazev": "Valtice hody obchuzka",
+          "datum": "07.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Valtice hodova zabava",
+          "datum": "14.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Hasicsky ples Radosovce",
+          "datum": "26.02.2028",
+          "cas": null,
+          "misto": "Radosovce"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "Dechová hudba Svárovanka.html",
+    "cas_s": 51.53,
+    "tokens_per_sec": 16.5,
+    "pocet_akci": 9,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "17.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "18.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Strážnice hody",
+          "datum": "14.11.2026",
+          "cas": null,
+          "misto": "Strážnice"
+        },
+        {
+          "nazev": "Katarínska zábava Štefanov",
+          "datum": "21.11.2026",
+          "cas": null,
+          "misto": "Štefanov"
+        },
+        {
+          "nazev": "Krojovy ples Valtice",
+          "datum": "30.01.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Lednice hody",
+          "datum": "24.07.2027",
+          "cas": null,
+          "misto": "Lednice"
+        },
+        {
+          "nazev": "Valtice hody obchuzka",
+          "datum": "07.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Valtice hodova zabava",
+          "datum": "14.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Hasicsky ples Radosovce",
+          "datum": "26.02.2028",
+          "cas": null,
+          "misto": "Radosovce"
+        }
+      ]
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "Dechová hudba Svárovanka.html",
+    "cas_s": 17.43,
+    "tokens_per_sec": 75.1,
+    "pocet_akci": 9,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "17.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Hody Zdanice",
+          "datum": "18.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Strážnice hody",
+          "datum": "14.11.2026",
+          "cas": null,
+          "misto": "Strážnice"
+        },
+        {
+          "nazev": "Katarínska zábava Štefanov",
+          "datum": "21.11.2026",
+          "cas": null,
+          "misto": "Štefanov"
+        },
+        {
+          "nazev": "Krojovy ples Valtice",
+          "datum": "30.01.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Lednice hody",
+          "datum": "24.07.2027",
+          "cas": null,
+          "misto": "Lednice"
+        },
+        {
+          "nazev": "Valtice hody obchuzka",
+          "datum": "07.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Valtice hodova zabava",
+          "datum": "14.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Hasicsky ples Radosovce",
+          "datum": "26.02.2028",
+          "cas": null,
+          "misto": "Radosovce"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "Dechová hudba Svárovanka.html",
+    "cas_s": 25.31,
+    "tokens_per_sec": 27.4,
+    "pocet_akci": 9,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Hody",
+          "datum": "17.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Hody",
+          "datum": "18.10.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Strážnice hody",
+          "datum": "14.11.2026",
+          "cas": null,
+          "misto": "Zdanice"
+        },
+        {
+          "nazev": "Katarínska zábava Štefanov",
+          "datum": "21.11.2026",
+          "cas": null,
+          "misto": "Štefanov"
+        },
+        {
+          "nazev": "Krojovy ples Valtice",
+          "datum": "30.01.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Lednice hody",
+          "datum": "24.07.2027",
+          "cas": null,
+          "misto": "Lednice"
+        },
+        {
+          "nazev": "Valtice hody obchuzka",
+          "datum": "07.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Valtice hodova zabava",
+          "datum": "14.08.2027",
+          "cas": null,
+          "misto": "Valtice"
+        },
+        {
+          "nazev": "Hasicsky ples Radosovce",
+          "datum": "26.02.2028",
+          "cas": null,
+          "misto": "Radosovce"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:2b",
+    "soubor": "Kalendář akcí 2026.pdf",
+    "cas_s": 37.36,
+    "tokens_per_sec": 107.0,
+    "pocet_akci": 36,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Myslivecký ples",
+          "datum": "16.1.",
+          "cas": null,
+          "misto": "Myslivecká střelnice v Rýnách"
+        },
+        {
+          "nazev": "Krojový ples",
+          "datum": "13.2.",
+          "cas": null,
+          "misto": "Obec chasa"
+        },
+        {
+          "nazev": "Beseda o historii",
+          "datum": "20.2.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Dětský karneval",
+          "datum": "7.3.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Jarní hrabání trávy u rybníka Cílem akce je vyhrabat starou suchou trávu na louce u rybníka.",
+          "datum": "7.3.",
+          "cas": null,
+          "misto": "U rybníka"
+        },
+        {
+          "nazev": "Pošli to dál",
+          "datum": "21.3.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Úklid Morkůvek",
+          "datum": "21.3.",
+          "cas": null,
+          "misto": "Katastr obce"
+        },
+        {
+          "nazev": "Retroples",
+          "datum": "28.3.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Den ptactva",
+          "datum": "1.4.",
+          "cas": null,
+          "misto": "Obec Spolek Adonis Morkůvky, Jiří Liščák"
+        },
+        {
+          "nazev": "Osudy letců II. zahraničního odboje z Břeclavska",
+          "datum": "1.-30.4.",
+          "cas": null,
+          "misto": "Kulturní dům, příp. obřadní síň"
+        },
+        {
+          "nazev": "Krojovaná velikonoční zábava",
+          "datum": "4.4.",
+          "cas": null,
+          "misto": "Obec chasa"
+        },
+        {
+          "nazev": "Průlet pro Peřinu",
+          "datum": "8.4.",
+          "cas": null,
+          "misto": "Nad obcí"
+        },
+        {
+          "nazev": "Vzpomínkový akt - F. Peřina Setkání občanů, spolků vojenské historie a dalších hostů u příležitosti uctění památky rodáka genpor. Františka Peřiny -115. výročí narození a 20. výročí úmrtí",
+          "datum": "9.5.",
+          "cas": null,
+          "misto": "Hřbitov, kulturní dům, muzeum"
+        },
+        {
+          "nazev": "Hasičský den",
+          "datum": "16.5.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Krajem vína - Májové putování okolím Modrých hor",
+          "datum": "17.5.",
+          "cas": null,
+          "misto": "Razítkovací místo u muzea, příp. jinde, víno, stánky, občerstvení pro cyklisty i další hosty"
+        },
+        {
+          "nazev": "Setkání seniorek",
+          "datum": "17.5.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Sportovní den",
+          "datum": "30.5.",
+          "cas": null,
+          "misto": "Hřiště"
+        },
+        {
+          "nazev": "Letní kino na Pláckách",
+          "datum": "27.6.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Memoriál gen. Peřiny Střelecká soutěž",
+          "datum": "19.7.",
+          "cas": null,
+          "misto": "MS Morkůvky"
+        },
+        {
+          "nazev": "Tradiční morkůvské krojované hody",
+          "datum": "14.",
+          "cas": null,
+          "misto": "Plácka u KD"
+        },
+        {
+          "nazev": "Letní kino na Pláckách",
+          "datum": "29.8.",
+          "cas": null,
+          "misto": "Plácka u KD"
+        },
+        {
+          "nazev": "Babí léto",
+          "datum": "5.9.",
+          "cas": null,
+          "misto": "Plácka u KD"
+        },
+        {
+          "nazev": "Morkůvská Heloudýně",
+          "datum": "19.9.",
+          "cas": null,
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Oktobeerfest",
+          "datum": "září",
+          "cas": null,
+          "misto": "Šenk U Fuka - na hřišti"
+        },
+        {
+          "nazev": "Premiéra divadelní hry",
+          "datum": "9.-",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Komunální volby",
+          "datum": "10.10.",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Císařské burčákové hody",
+          "datum": "17.10.",
+          "cas": null,
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Drakiáda",
+          "datum": "18.10.",
+          "cas": null,
+          "misto": "Polní cesta k Rýnám"
+        },
+        {
+          "nazev": "Lampiónový průvod",
+          "datum": "31.10.",
+          "cas": null,
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Beseda o historii, regionu",
+          "datum": "listopad",
+          "cas": null,
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Vánoční aranžmá",
+          "datum": "28.11.",
+          "cas": null,
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Adventní čas",
+          "datum": "1.-",
+          "cas": null,
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Mikulášská nadílka na Pláckách",
+          "datum": "5.12.",
+          "cas": null,
+          "misto": "Plácka u KD"
+        },
+        {
+          "nazev": "Česko zpívá koledy",
+          "datum": "9.12.",
+          "cas": null,
+          "misto": "u Muzea genpor. F. Peřiny"
+        },
+        {
+          "nazev": "Adventní koncert",
+          "datum": "13.12.",
+          "cas": null,
+          "misto": "obec"
+        },
+        {
+          "nazev": "Štěpánské zpívání v Kaštance",
+          "datum": "26.12.",
+          "cas": null,
+          "misto": "Kaštanka"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:4b",
+    "soubor": "Kalendář akcí 2026.pdf",
+    "cas_s": 26.09,
+    "tokens_per_sec": 68.1,
+    "pocet_akci": 16,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Morkůvské krojované hody",
+          "datum": "2026-08-14",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Morkůvské krojované hody",
+          "datum": "2026-08-15",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Morkůvské krojované hody",
+          "datum": "2026-08-16",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Morkůvské krojované hody",
+          "datum": "2026-08-17",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Morkůvská Heloudýně",
+          "datum": "2026-09-19",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Oktobeerfest",
+          "datum": "2026-09-21",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Císařské burčákové hody",
+          "datum": "2026-10-17",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Drakiáda",
+          "datum": "2026-10-18",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Lampiónový průvod",
+          "datum": "2026-10-31",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Beseda o historii, regionu",
+          "datum": "2026-11-09",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Vánoční aranžmá",
+          "datum": "2026-11-28",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Adventní čas",
+          "datum": "2026-12-01",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Mikulášská nadílka na Pláckách",
+          "datum": "2026-12-05",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Česko zpívá koledy",
+          "datum": "2026-12-09",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Adventní koncert",
+          "datum": "2026-12-13",
+          "cas": null,
+          "misto": "Morkovsko"
+        },
+        {
+          "nazev": "Štěpánské zpívání v Kaštance",
+          "datum": "2026-12-26",
+          "cas": null,
+          "misto": "Kaštanka"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.5:9b",
+    "soubor": "Kalendář akcí 2026.pdf",
+    "cas_s": 29.29,
+    "tokens_per_sec": 16.3,
+    "pocet_akci": 2,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Tradiční morkůvské krojované hody",
+          "datum": "2026-08-14",
+          "cas": null,
+          "misto": "Morkův"
+        },
+        {
+          "nazev": "Císařské burčákové hody",
+          "datum": "2026-10-17",
+          "cas": null,
+          "misto": "Morkův"
+        }
+      ]
+    }
+  },
+  {
+    "model": "gemma3:4b",
+    "soubor": "Kalendář akcí 2026.pdf",
+    "cas_s": 27.85,
+    "tokens_per_sec": 72.3,
+    "pocet_akci": 22,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Myslivecký ples",
+          "datum": "16.1.",
+          "cas": "20:00",
+          "misto": "Bojané"
+        },
+        {
+          "nazev": "Krojový ples",
+          "datum": "13.2.",
+          "cas": "20:00",
+          "misto": "Bojané"
+        },
+        {
+          "nazev": "Beseda o historii",
+          "datum": "20.2.",
+          "cas": "20:00",
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Košty vín",
+          "datum": "7.3.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Vystoupení dechových a cimbálových hudeb",
+          "datum": "7.3.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Folklórní festival",
+          "datum": "21.3.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Retroples",
+          "datum": "28.3.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Krojovaná velikonoční zábava",
+          "datum": "1.4.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Průlet pro Peřinu",
+          "datum": "8.4.",
+          "cas": "20:00",
+          "misto": "Čáslav"
+        },
+        {
+          "nazev": "Vzpomínkový akt - F. Peřina",
+          "datum": "11.4.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Hasičský den",
+          "datum": "9.5.",
+          "cas": "20:00",
+          "misto": "Plácka u KD"
+        },
+        {
+          "nazev": "Krajem vína - Májové putování",
+          "datum": "16.5.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Setkání seniorek",
+          "datum": "17.5.",
+          "cas": "20:00",
+          "misto": "Morkůvky"
+        },
+        {
+          "nazev": "Sportovní den",
+          "datum": "30.5.",
+          "cas": "20:00",
+          "misto": "Hřiště"
+        },
+        {
+          "nazev": "Morkůvské krojované hody",
+          "datum": "17.8.",
+          "cas": "20:00",
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Morkůvská Heloudýně",
+          "datum": "19.9.",
+          "cas": "null",
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Císařské burčákové hody",
+          "datum": "17.10.",
+          "cas": "null",
+          "misto": "Kulturní dům"
+        },
+        {
+          "nazev": "Lampiónový průvod",
+          "datum": "31.10.",
+          "cas": "null",
+          "misto": "Obec, Šenk U Fuka"
+        },
+        {
+          "nazev": "Adventní čas",
+          "datum": "1.-24.12.",
+          "cas": "null",
+          "misto": "Obec"
+        },
+        {
+          "nazev": "Mikulášská nadílka na Pláckách",
+          "datum": "5.12.",
+          "cas": "null",
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Česko zpívá koledy",
+          "datum": "9.12.",
+          "cas": "null",
+          "misto": "u Muzea genpor. F. Peřiny"
+        },
+        {
+          "nazev": "Štěpánské zpívání v Kaštance",
+          "datum": "26.12.",
+          "cas": "null",
+          "misto": "Kaštanka"
+        }
+      ]
+    }
+  },
+  {
+    "model": "minicpm-v:8b",
+    "soubor": "Kalendář akcí 2026.pdf",
+    "cas_s": 89.27,
+    "tokens_per_sec": 23.9,
+    "pocet_akci": 32,
+    "vystup": {
+      "nalezeno": true,
+      "akce": [
+        {
+          "nazev": "Myslivecký ples",
+          "datum": "16.1.",
+          "cas": null,
+          "misto": "MS Morkůvky"
+        },
+        {
+          "nazev": "Krojový ples",
+          "datum": "13.2.",
+          "cas": null,
+          "misto": "Obec, chasa"
+        },
+        {
+          "nazev": "Beseda o historii",
+          "datum": "20.2.",
+          "cas": null,
+          "misto": "Sdružení Kořeny z.s."
+        },
+        {
+          "nazev": "Dětský karneval",
+          "datum": "7.3.",
+          "cas": null,
+          "misto": "Sdružení Pro děti"
+        },
+        {
+          "nazev": "Jarní hrabání trávy u rybníka",
+          "datum": "21.3.",
+          "cas": null,
+          "misto": "Spolek Adonis Morkůvky"
+        },
+        {
+          "nazev": "Pošli to dál",
+          "datum": "21.3.",
+          "cas": null,
+          "misto": "LaRa - laskavost a radost, z.s."
+        },
+        {
+          "nazev": "Úklid Morkůvek",
+          "datum": "21.3.",
+          "cas": null,
+          "misto": "Katastr obce"
+        },
+        {
+          "nazev": "Retroples",
+          "datum": "28.3.",
+          "cas": null,
+          "misto": "Sdružení Pro děti"
+        },
+        {
+          "nazev": "Den ptactva",
+          "datum": "1.-30.4.",
+          "cas": null,
+          "misto": "Obec, Spolek Adonis Morkůvky, Jiří Liščák"
+        },
+        {
+          "nazev": "Osudy letců II. zahraničního odboje z Břeclavska",
+          "datum": "4.4.",
+          "cas": null,
+          "misto": "Sdružení Kořeny z.s."
+        },
+        {
+          "nazev": "Krojovaná velikonoční zábava",
+          "datum": "8.4.",
+          "cas": null,
+          "misto": "Obec, chasa"
+        },
+        {
+          "nazev": "Průlet pro Peřinu",
+          "datum": "11.4.",
+          "cas": null,
+          "misto": "212. TL Čáslav, Sdružení Kořeny z.s., obec nad obcí"
+        },
+        {
+          "nazev": "Vzpomínkový akt - F. Peřina Setkání občanů, spolků vojenské history a dalších hostů u příležitosti uctění památky rodáka genpor. Františka Peřiny -115. výročí narození a 20. výročí úmrtí",
+          "datum": "11.4.",
+          "cas": null,
+          "misto": "Obec, Sdružení kořeny z.s., DS Peřinka Hřbitov, kulturní dům, muzeum"
+        },
+        {
+          "nazev": "Hasičský den",
+          "datum": "16.5.",
+          "cas": null,
+          "misto": "SDH Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Krajem vína - Májové putování okolím Modrých hor",
+          "datum": "17.5.",
+          "cas": null,
+          "misto": "Nadace Partnerství, Vinařský fond, DSO Modré Hory, Obec Morkůvky u Muzea genpor. F. Peřiny"
+        },
+        {
+          "nazev": "Setkání seniorek",
+          "datum": "30.5.",
+          "cas": null,
+          "misto": "obec, další spolky a aktéři, mužský sbor Suchá hruda, DS Peřinka Kulturní dům"
+        },
+        {
+          "nazev": "Sportovní den",
+          "datum": "27.6.",
+          "cas": null,
+          "misto": "Sdružení Pro děti Hřiště"
+        },
+        {
+          "nazev": "Letní kino na Pláckách",
+          "datum": "19.7.",
+          "cas": null,
+          "misto": "Obec Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Memoriál gen. Peřiny",
+          "datum": "17.5.",
+          "cas": null,
+          "misto": "MS Morkůvky Myslivecká střelnice v Rýnách"
+        },
+        {
+          "nazev": "Tradiční morkůvské krojované hody",
+          "datum": "17.8.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Letní kino na Pláckách",
+          "datum": "29.8.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Babí léto",
+          "datum": "5.9.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Morkůvská Heloudýně",
+          "datum": "19.9.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Oktobeerfest",
+          "datum": "říjen",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Komunální volby",
+          "datum": "17.10.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Císařské burčákové hody",
+          "datum": "18.10.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Drakiáda",
+          "datum": "31.10.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Lampiónový průvod",
+          "datum": "listopad",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Adventní čas",
+          "datum": "1.12.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Mikulášská nadílka na Pláckách",
+          "datum": "9.12.",
+          "cas": null,
+          "misto": "Plácka u KD, příp. kulturní dům"
+        },
+        {
+          "nazev": "Česko zpívá koledy",
+          "datum": "13.12.",
+          "cas": null,
+          "misto": "Plácka u Muzea genpor. F. Peřiny"
+        },
+        {
+          "nazev": "Štěpánské zpívání v Kaštance",
+          "datum": "26.12.",
+          "cas": null,
+          "misto": "Kaštanka"
+        }
+      ]
+    }
+  }
+]
