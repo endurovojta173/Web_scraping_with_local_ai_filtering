@@ -11,11 +11,20 @@ import pymupdf
 
 # Seznam všech modelů, které se mají otestovat
 MODELY = [
-    "qwen3.5:9b",
+    "minicpm-v:8b",
+    #"gemma3:12b", too slow
+    "qwen2.5vl:7b",
+    "gemma4:e4b",
+    "llava-phi3:latest",
+    "minicpm-v:latest",
+    "deepseek-r1:8b",
+    "deepseek-r1:7b",
     "qwen3.5:4b",
-    "phi4-mini:latest",
+    "qwen3.5:9b",
     "gemma3:4b",
-    # "minicpm-v:8b", # Přidej další modely podle potřeby
+    "qwen3.5:2b",
+    "phi4-mini:latest",
+    "granite3.2-vision:2b"
 ]
 
 # 1. Definice schématu
@@ -46,19 +55,15 @@ def zavolej_model(model: str, zprava: dict) -> tuple[dict, float, int, float]:
             format=VysledekExtrakce.model_json_schema(),
             think=False,
             options={
-                #Vypina kreativitu, aby model generoval přesně podle schématu
                 "temperature": 0.0,
-                #Nastavuje velikost kontextového okna (kolik textu ze zadání a dokumentu model najednou "přečte"
                 "num_ctx": 8192,
-                #Omezuje maximální možnou délku vygenerované odpovědi na 2048 tokenů.
                 "num_predict": 4096
             }
         )
     except Exception as e:
         cas = time.perf_counter() - start
         chyba_str = str(e).lower()
-        # Odchycení textových modelů na obrázkových vstupech
-        if "multimodal" in chyba_str or "images" in chyba_str or "vision" in chyba_str:
+        if "multimodal" in chyba_str or "images" in chyba_str or "vision" in chyba_str or "support" in chyba_str:
             return {"chyba": "Nepodporuje multimodální vstup (neumí číst obrázky/PDF)"}, cas, 0, 0
         else:
             return {"chyba": f"Chyba modelu: {str(e)}"}, cas, 0, 0
@@ -72,7 +77,8 @@ def zavolej_model(model: str, zprava: dict) -> tuple[dict, float, int, float]:
         data = {"nalezeno": False, "akce": [], "chyba": "JSON Decode Error", "surovy_vystup": surovy}
 
     eval_count = odpoved.get("eval_count", 0)
-    eval_dur = odpoved.get("eval_duration", 1) / 1e9
+    eval_dur_raw = odpoved.get("eval_duration")
+    eval_dur = (eval_dur_raw if eval_dur_raw is not None else 1) / 1e9
     return data, cas, eval_count, eval_dur
 
 # 4. Hlavní testovací funkce
@@ -111,3 +117,71 @@ def otestuj_soubor(cesta: Path, model: str) -> dict:
         data, cas, tok, dur = zavolej_model(model, zprava)
         if "chyba" in data:
             return {**vysledek_sablona, "chyba": data["chyba"], "cas_s": round(cas, 2)}
+            
+        tps = round(tok / dur, 1) if dur > 0 else 0
+        return {**vysledek_sablona, "uspech": True, "cas_s": round(cas, 2), "tokens_per_sec": tps, "pocet_akci": len(data.get("akce", [])), "vystup": data}
+
+    # C) PDF soubory
+    elif pripona == ".pdf":
+        doc = pymupdf.open(cesta)
+        vsechny_akce = []
+        celkovy_cas = 0.0
+        celkem_tok = 0
+        celkem_dur = 0.0
+
+        max_stran = len(doc)
+        for i in range(max_stran):
+            page = doc.load_page(i)
+            pix = page.get_pixmap(dpi=150)
+            zprava = {
+                "role": "user",
+                "content": instrukce,
+                "images": [pix.tobytes("png")]
+            }
+
+            data, cas, tok, dur = zavolej_model(model, zprava)
+            if "chyba" in data:
+                doc.close()
+                return {**vysledek_sablona, "chyba": data["chyba"], "cas_s": round(celkovy_cas + cas, 2)}
+                
+            celkovy_cas += cas
+            celkem_tok += tok
+            celkem_dur += dur
+            vsechny_akce.extend(data.get("akce", []))
+
+        doc.close()
+        tps = round(celkem_tok / celkem_dur, 1) if celkem_dur > 0 else 0
+        vystup_data = {"nalezeno": len(vsechny_akce) > 0, "akce": vsechny_akce}
+        return {**vysledek_sablona, "uspech": True, "cas_s": round(celkovy_cas, 2), "tokens_per_sec": tps, "pocet_akci": len(vsechny_akce), "vystup": vystup_data}
+
+    else:
+        return {**vysledek_sablona, "chyba": f"Nepodporovaný formát: {pripona}"}
+
+# 5. Spuštění benchmarku pro všechny modely a soubory
+if __name__ == "__main__":
+    slozka = Path("test_data")
+    slozka.mkdir(exist_ok=True)
+    
+    soubory = [s for s in slozka.iterdir() if s.is_file()]
+    if not soubory:
+        print("Vlož do složky 'test_data' soubory a spusť znovu.")
+        exit()
+
+    vysledky = []
+    for model in MODELY:
+        print(f"\n====================================")
+        print(f" Testuji model: {model}")
+        print(f"====================================")
+        for soubor in soubory:
+            print(f"  -> Soubor: {soubor.name} ... ", end="", flush=True)
+            res = otestuj_soubor(soubor, model)
+            vysledky.append(res)
+            if "chyba" in res:
+                print(f"CHYBA: {res['chyba']} ({res.get('cas_s', 0)} s)")
+            else:
+                print(f"HOTOVO ({res['cas_s']} s, {res['tokens_per_sec']} tok/s) | Akcí: {res['pocet_akci']}")
+
+    cas_stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    vystupni_soubor = Path(f"vysledky_porovnani_{cas_stamp}.json")
+    vystupni_soubor.write_text(json.dumps(vysledky, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"\nKompletní výsledky uloženy do {vystupni_soubor}")
