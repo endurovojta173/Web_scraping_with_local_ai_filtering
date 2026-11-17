@@ -1,15 +1,27 @@
-import time
+import argparse
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
-from collections import defaultdict
 from pydantic import BaseModel, Field
 from bs4 import BeautifulSoup
-from ollama import chat
 import pymupdf
 
+from providers import (
+    EINFRA_CONFIG,
+    ModelOdpoved,
+    OpenAICompatibleProvider,
+    nacti_env,
+    rozpoznaj_model,
+    zavolej_poskytovatele,
+)
+
+nacti_env()
+
 # Seznam všech modelů, které se mají otestovat
+# Lokální modely (Ollama) se píšou přímo nebo s prefixem "ollama:"
+# Cloudové modely z e-INFRA CZ se píšou s prefixem "einfra:" (seznam ID vypíše: python benchmark.py --list-einfra)
 MODELY = [
     "minicpm-v:8b",
     #"gemma3:12b", too slow
@@ -24,7 +36,16 @@ MODELY = [
     "gemma3:4b",
     "qwen3.5:2b",
     "phi4-mini:latest",
-    "granite3.2-vision:2b"
+    "granite3.2-vision:2b",
+    # Modely z einfra
+    "einfra:gemma4",
+    "einfra:qwen3.8-27b",
+    "einfra:qwen3.8-flash-next",
+    "einfra:mistral-medium-3.5",
+    "einfra:deepseek-v4.1-flash",
+    "einfra:glm-5.3-flash",
+    "einfra:kimi-k3",
+    "einfra:gpt-oss-120b",
 ]
 
 # 1. Definice schématu
@@ -45,41 +66,33 @@ def vycisti_html(cesta: Path) -> str:
         tag.decompose()
     return soup.get_text(separator="\n", strip=True)
 
-# 3. Pomocná funkce s odchycením chyb multimodality
-def zavolej_model(model: str, zprava: dict) -> tuple[dict, float, int, float]:
-    start = time.perf_counter()
-    try:
-        odpoved = chat(
-            model=model,
-            messages=[zprava],
-            format=VysledekExtrakce.model_json_schema(),
-            think=False,
-            options={
-                "temperature": 0.0,
-                "num_ctx": 8192,
-                "num_predict": 4096
-            }
-        )
-    except Exception as e:
-        cas = time.perf_counter() - start
-        chyba_str = str(e).lower()
-        if "multimodal" in chyba_str or "images" in chyba_str or "vision" in chyba_str or "support" in chyba_str:
-            return {"chyba": "Nepodporuje multimodální vstup (neumí číst obrázky/PDF)"}, cas, 0, 0
-        else:
-            return {"chyba": f"Chyba modelu: {str(e)}"}, cas, 0, 0
+# 3. Volání modelu přes vybraného poskytovatele (Ollama / e-INFRA API)
+def zavolej_model(model: str, zprava: dict) -> ModelOdpoved:
+    _, odpoved = zavolej_poskytovatele(model, zprava, VysledekExtrakce.model_json_schema())
+    return odpoved
 
-    cas = time.perf_counter() - start
-    surovy = odpoved["message"]["content"].strip()
-    
-    try:
-        data = json.loads(surovy)
-    except json.JSONDecodeError:
-        data = {"nalezeno": False, "akce": [], "chyba": "JSON Decode Error", "surovy_vystup": surovy}
 
-    eval_count = odpoved.get("eval_count", 0)
-    eval_dur_raw = odpoved.get("eval_duration")
-    eval_dur = (eval_dur_raw if eval_dur_raw is not None else 1) / 1e9
-    return data, cas, eval_count, eval_dur
+def _sestav_vysledek(
+    sablona: dict,
+    cas: float,
+    vystupni_tokeny: int,
+    vstupni_tokeny: int,
+    dur: float,
+    data: dict,
+) -> dict:
+    """Sestaví finální slovník výsledku včetně počtu vygenerovaných tokenů a rychlosti."""
+    tps = round(vystupni_tokeny / dur, 1) if dur > 0 else 0
+    return {
+        **sablona,
+        "uspech": True,
+        "cas_s": round(cas, 2),
+        "pocet_tokenu": vystupni_tokeny,
+        "vstupni_tokeny": vstupni_tokeny,
+        "tokens_per_sec": tps,
+        "pocet_akci": len(data.get("akce", [])),
+        "vystup": data,
+    }
+
 
 # 4. Hlavní testovací funkce
 def otestuj_soubor(cesta: Path, model: str) -> dict:
@@ -97,36 +110,47 @@ def otestuj_soubor(cesta: Path, model: str) -> dict:
         "Nikdy si nevymýšlej údaje, které ve vstupu nejsou. Vrať výsledek přesně podle JSON schématu."
     )
 
+    try:
+        poskytovatel, _ = rozpoznaj_model(model)
+    except ValueError as e:
+        return {"model": model, "soubor": cesta.name, "uspech": False, "chyba": str(e)}
+
     pripona = cesta.suffix.lower()
-    vysledek_sablona = {"model": model, "soubor": cesta.name, "uspech": False}
+    vysledek_sablona = {
+        "model": model,
+        "poskytovatel": poskytovatel,
+        "soubor": cesta.name,
+        "uspech": False,
+    }
 
-    # A) Obrázky
-    if pripona in [".jpg", ".jpeg", ".png", ".webp"]:
-        zprava = {"role": "user", "content": instrukce, "images": [str(cesta)]}
-        data, cas, tok, dur = zavolej_model(model, zprava)
-        if "chyba" in data:
-            return {**vysledek_sablona, "chyba": data["chyba"], "cas_s": round(cas, 2)}
-            
-        tps = round(tok / dur, 1) if dur > 0 else 0
-        return {**vysledek_sablona, "uspech": True, "cas_s": round(cas, 2), "tokens_per_sec": tps, "pocet_akci": len(data.get("akce", [])), "vystup": data}
+    # A) Obrázky a B) HTML soubory
+    if pripona in [".jpg", ".jpeg", ".png", ".webp", ".html", ".htm"]:
+        if pripona in [".html", ".htm"]:
+            cisty_text = vycisti_html(cesta)
+            zprava = {"role": "user", "content": f"{instrukce}\n\nTEXT WEBU:\n{cisty_text[:12000]}"}
+        else:
+            zprava = {"role": "user", "content": instrukce, "images": [str(cesta)]}
 
-    # B) HTML soubory
-    elif pripona in [".html", ".htm"]:
-        cisty_text = vycisti_html(cesta)
-        zprava = {"role": "user", "content": f"{instrukce}\n\nTEXT WEBU:\n{cisty_text[:12000]}"}
-        data, cas, tok, dur = zavolej_model(model, zprava)
-        if "chyba" in data:
-            return {**vysledek_sablona, "chyba": data["chyba"], "cas_s": round(cas, 2)}
-            
-        tps = round(tok / dur, 1) if dur > 0 else 0
-        return {**vysledek_sablona, "uspech": True, "cas_s": round(cas, 2), "tokens_per_sec": tps, "pocet_akci": len(data.get("akce", [])), "vystup": data}
+        odp = zavolej_model(model, zprava)
+        if "chyba" in odp.data:
+            return {**vysledek_sablona, "chyba": odp.data["chyba"], "cas_s": round(odp.cas, 2)}
+
+        return _sestav_vysledek(
+            vysledek_sablona,
+            odp.cas,
+            odp.vystupni_tokeny,
+            odp.vstupni_tokeny,
+            odp.eval_dur,
+            odp.data,
+        )
 
     # C) PDF soubory
     elif pripona == ".pdf":
         doc = pymupdf.open(cesta)
         vsechny_akce = []
         celkovy_cas = 0.0
-        celkem_tok = 0
+        celkem_vystup_tok = 0
+        celkem_vstup_tok = 0
         celkem_dur = 0.0
 
         max_stran = len(doc)
@@ -136,42 +160,83 @@ def otestuj_soubor(cesta: Path, model: str) -> dict:
             zprava = {
                 "role": "user",
                 "content": instrukce,
-                "images": [pix.tobytes("png")]
+                "images": [pix.tobytes("png")],
             }
 
-            data, cas, tok, dur = zavolej_model(model, zprava)
-            if "chyba" in data:
+            odp = zavolej_model(model, zprava)
+            if "chyba" in odp.data:
                 doc.close()
-                return {**vysledek_sablona, "chyba": data["chyba"], "cas_s": round(celkovy_cas + cas, 2)}
-                
-            celkovy_cas += cas
-            celkem_tok += tok
-            celkem_dur += dur
-            vsechny_akce.extend(data.get("akce", []))
+                return {**vysledek_sablona, "chyba": odp.data["chyba"], "cas_s": round(celkovy_cas + odp.cas, 2)}
+
+            celkovy_cas += odp.cas
+            celkem_vystup_tok += odp.vystupni_tokeny
+            celkem_vstup_tok += odp.vstupni_tokeny
+            celkem_dur += odp.eval_dur
+            vsechny_akce.extend(odp.data.get("akce", []))
 
         doc.close()
-        tps = round(celkem_tok / celkem_dur, 1) if celkem_dur > 0 else 0
         vystup_data = {"nalezeno": len(vsechny_akce) > 0, "akce": vsechny_akce}
-        return {**vysledek_sablona, "uspech": True, "cas_s": round(celkovy_cas, 2), "tokens_per_sec": tps, "pocet_akci": len(vsechny_akce), "vystup": vystup_data}
+        return _sestav_vysledek(
+            vysledek_sablona,
+            celkovy_cas,
+            celkem_vystup_tok,
+            celkem_vstup_tok,
+            celkem_dur,
+            vystup_data,
+        )
 
     else:
         return {**vysledek_sablona, "chyba": f"Nepodporovaný formát: {pripona}"}
 
+
+def _vypis_einfra_modely() -> int:
+    try:
+        modely = OpenAICompatibleProvider(EINFRA_CONFIG).vypis_modely()
+    except RuntimeError as e:
+        print(f"Chyba: {e}", file=sys.stderr)
+        return 1
+
+    print("Dostupné modely na e-INFRA CZ (použij v MODELY s prefixem 'einfra:'):")
+    for m in modely:
+        print(f"  - einfra:{m}")
+    return 0
+
+
+def _parsuj_argumenty() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Benchmark extrakce folklórních akcí (Ollama + e-INFRA API)")
+    parser.add_argument(
+        "--list-einfra",
+        action="store_true",
+        help="Vypíše dostupné modely na e-INFRA CZ API a skončí.",
+    )
+    parser.add_argument(
+        "--modely",
+        nargs="+",
+        help="Volitelný seznam modelů ke spuštění místo výchozího seznamu MODELY.",
+    )
+    return parser.parse_args()
+
+
 # 5. Spuštění benchmarku pro všechny modely a soubory
 if __name__ == "__main__":
+    args = _parsuj_argumenty()
+    if args.list_einfra:
+        sys.exit(_vypis_einfra_modely())
+
     slozka = Path("test_data")
     slozka.mkdir(exist_ok=True)
-    
+
     soubory = [s for s in slozka.iterdir() if s.is_file()]
     if not soubory:
         print("Vlož do složky 'test_data' soubory a spusť znovu.")
-        exit()
+        sys.exit(0)
 
+    vybrane_modely = args.modely or MODELY
     vysledky = []
-    for model in MODELY:
-        print(f"\n====================================")
+    for model in vybrane_modely:
+        print("\n====================================")
         print(f" Testuji model: {model}")
-        print(f"====================================")
+        print("====================================")
         for soubor in soubory:
             print(f"  -> Soubor: {soubor.name} ... ", end="", flush=True)
             res = otestuj_soubor(soubor, model)
@@ -179,7 +244,7 @@ if __name__ == "__main__":
             if "chyba" in res:
                 print(f"CHYBA: {res['chyba']} ({res.get('cas_s', 0)} s)")
             else:
-                print(f"HOTOVO ({res['cas_s']} s, {res['tokens_per_sec']} tok/s) | Akcí: {res['pocet_akci']}")
+                print(f"HOTOVO ({res['cas_s']} s, {res['pocet_tokenu']} tok, {res['tokens_per_sec']} tok/s) | Akcí: {res['pocet_akci']}")
 
     cas_stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     vystupni_soubor = Path(f"vysledky_porovnani_{cas_stamp}.json")

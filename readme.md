@@ -65,7 +65,9 @@ Ujisti se, že máš soubory ve složce uspořádané takto:
 ```text
 bakalarka/
 ├── .venv/                   # Virtuální prostředí Pythonu
+├── .env.example             # Šablona pro API klíč e-INFRA CZ
 ├── test_data/               # Složka se vstupními soubory (.pdf, .html, .jpg, .png)
+├── providers.py             # Klienti pro lokální Ollamu a API poskytovatele (e-INFRA)
 ├── benchmark.py             # Testovací a porovnávací skript
 ├── vysledky_porovnani.json  # Výstupní soubor (vytvoří se automaticky po běhu)
 ├── requirements.txt         # Seznam závislostí
@@ -80,7 +82,30 @@ python benchmark.py
 
 ---
 
-## 5. Diagnostika a sledování výkonu (pro účely měření v BP)
+## 5. Zapojení cloudových / API modelů (e-INFRA CZ)
+
+Benchmark podporuje vzdálené OpenAI-kompatibilní modely z infrastruktury **e-INFRA CZ** (`https://llm.ai.e-infra.cz/v1`).
+
+1. Přihlas se na [chat.ai.e-infra.cz](https://chat.ai.e-infra.cz) a v **Nastavení → Účet → API klíče** vygeneruj API klíč.
+2. Zkopíruj `.env.example` jako `.env` a vlož svůj klíč:
+   ```bash
+   cp .env.example .env
+   ```
+   ```dotenv
+   EINFRA_AI_TOKEN=tvuj_api_klic
+   ```
+3. Vypiš si přesná ID modelů dostupných na tvém účtu:
+   ```bash
+   python benchmark.py --list-einfra
+   ```
+4. Přidej vybrané modely s prefixem `einfra:` do seznamu `MODELY` v `benchmark.py`, nebo je spusť jednorázově z příkazové řádky:
+   ```bash
+   python benchmark.py --modely einfra:gpt-oss-120b qwen3.5:4b
+   ```
+
+---
+
+## 6. Diagnostika a sledování výkonu (pro účely měření v BP)
 
 Během běhu skriptu můžeš v druhém okně terminálu sledovat zatížení hardwaru:
 
